@@ -30,7 +30,7 @@ const LINKDATA = [
 function Header() {
   return (
     <header className="bg-[#191919] font-custom">
-        <div className="container flex items-center justify-between gap-4 py-9">
+        <div className="container flex items-center justify-between gap-4 py-9 border-b-[0.5px] border-b-gray-500">
         <button className="lg:hidden">
                 <img src={hamburger} alt="" />
             </button>

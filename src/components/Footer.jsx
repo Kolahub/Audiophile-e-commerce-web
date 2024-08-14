@@ -27,7 +27,7 @@ const LINKDATA = [
 
 function Footer() {
   return (
-    <div className="lg:container px-6 py-16">
+    <div className="lg:container px-6 py-16 bg-blackSecondary">
       <div className="flex flex-col lg:flex-row items-center sm:items-start lg:items-center justify-between gap-8 md:gap-6 mb-8">
         <img src={logo} alt="logo" className="" />
         <nav className="block">
