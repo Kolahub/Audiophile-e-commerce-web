@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import logo from '/assets/shared/desktop/logo.svg'
 import cart from '/assets/shared/desktop/icon-cart.svg'
 import hamburger from '/assets/shared/tablet/icon-hamburger.svg'
+import Cart from './Cart'
 
 const LINKDATA = [
     {
@@ -50,6 +51,10 @@ function Header() {
             <button>
             <img src={cart} alt="" />
             </button>
+        </div>
+
+        <div className="">
+            <Cart />
         </div>
     </header>
   )
