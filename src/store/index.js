@@ -2,6 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const intialProductSlice = {
     cart: [],
+    isCartOpen: false
 }
 
 const productsSlice = createSlice ({
@@ -40,6 +41,10 @@ const productsSlice = createSlice ({
                 itemToDecrease.total = itemToDecrease.quantity * itemToDecrease.price
             }
         },
+
+        toggleOpenCart (state) {
+            state.isCartOpen = !state.isCartOpen
+        }
     }
 })
 

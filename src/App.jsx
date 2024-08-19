@@ -11,6 +11,7 @@ import EarphonesDetails, {Loader as earphonesDetailLoader} from "./pages/Earphon
 import HeadphonesRoot from "./pages/HeadphonesRoot"
 import SpeakersRoot from "./pages/SpeakersRoot"
 import EarphonesRoot from "./pages/EarphonesRoot"
+import Checkout from "./components/Checkout"
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
         {index: true, element: <EarPhone />, loader: earphonesLoader},
         {path: ':earphoneId', id: 'earphones-detail', element: <EarphonesDetails />, loader: earphonesDetailLoader},
       ]},
+      {path: 'checkout', element: <Checkout />}
     ]
   }
 ])

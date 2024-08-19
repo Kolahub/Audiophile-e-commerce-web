@@ -5,6 +5,7 @@ import StoreDescription from "../components/StoreDescription";
 import Footer from "../components/Footer";
 import { IncludesInfo, MayAlsoLike, ProductGallery } from "../components/ProductInfo";
 import AddToCart from "../components/AddToCart";
+import GoBack from "../components/GoBack";
 
 function SpeakersDetails() {
   const products = useRouteLoaderData('speakers-detail')
@@ -13,7 +14,11 @@ function SpeakersDetails() {
   const item = products[0].find(product => product.id === Number(products[1]));
   // console.log(item);
   return (
-    <div className="font-custom">
+    <div className="font-custom pt-24">
+            <div className="px-6 pt-12 lg:container">
+        <GoBack />
+      </div>
+
       <section className='px-6 lg:container py-16'>
         <AddToCart product={item} />
       </section>
@@ -46,9 +51,10 @@ function SpeakersDetails() {
 
 export default SpeakersDetails
 
+// eslint-disable-next-line no-unused-vars
 export async function Loader({ request, params }) {
   const id = params.speakerId;
-  console.log(id);
+  // console.log(id);
 
   const res = await fetch('/data.json');
   if (!res.ok) throw json({ message: 'Could not get details on this product.' }, {

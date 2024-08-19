@@ -1,29 +1,29 @@
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { productsAction } from '../store';
+import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { productsAction } from "../store";
 
 function AddToCart({ product }) {
-    const dispatch = useDispatch()
-  const price = new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'USD',
+  const dispatch = useDispatch();
+  const price = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "USD",
   }).format(product.price);
 
   function handleAddToCart() {
-    dispatch(productsAction.addToCart(product))
+    dispatch(productsAction.addToCart(product));
   }
 
   function increaseItemQuantity(itemToAdd) {
-    dispatch(productsAction.increaseProductQuantity(itemToAdd.id))
+    dispatch(productsAction.increaseProductQuantity(itemToAdd.id));
   }
 
   function decreaseItemQuantity(itemToAdd) {
-    dispatch(productsAction.decreaseProductQuantity(itemToAdd.id))
+    dispatch(productsAction.decreaseProductQuantity(itemToAdd.id));
   }
 
   return (
     <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
-      <div className="md:h-[480px] lg:h-[560px] md:w-[45%]">
+      <div className="md:h-[480px] lg:h-[500px] md:w-[45%]">
         <img
           src={product.image.desktop}
           alt={product.name}
@@ -54,11 +54,24 @@ function AddToCart({ product }) {
 
         <div className="mt-8 flex gap-4">
           <div className="w-32 font-bold bg-gray-100 p-3 flex items-center justify-around">
-            <button onClick={() => decreaseItemQuantity(product)} className="text-gray-400">-</button>
+            <button
+              onClick={() => decreaseItemQuantity(product)}
+              className="text-gray-400 hover:text-orangePrimary active:scale-125"
+            >
+              -
+            </button>
             <span className="">1</span>
-            <button onClick={() => increaseItemQuantity(product)} className="text-gray-400">+</button>
+            <button
+              onClick={() => increaseItemQuantity(product)}
+              className="text-gray-400 hover:text-orangePrimary active:scale-125"
+            >
+              +
+            </button>
           </div>
-          <button onClick={handleAddToCart} className="w-40 bg-orangePrimary py-3 text-whitePrimary uppercase font-bold text-sm">
+          <button
+            onClick={handleAddToCart}
+            className="w-40 bg-orangePrimary hover:bg-orangeSecondary active:scale-95 py-3 text-whitePrimary uppercase font-bold text-sm"
+          >
             Add to Cart
           </button>
         </div>

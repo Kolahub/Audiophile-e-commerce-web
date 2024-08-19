@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
-      <div className="font-custom">
+      <div className="font-custom pt-24">
         <section className=" text-white bg-[url('/assets/home/mobile/image-header.jpg')] sm:bg-[url('/assets/home/tablet/image-header.jpg')] lg:bg-[url('/assets/home/desktop/image-hero.jpg')] h-screen bg-top-custom bg-cover">
           <div className="container flex justify-between items-center h-full">
             <div className="w-full lg:w-[40%] text-center lg:text-left">

@@ -14,7 +14,7 @@ function Speakers() {
   // console.log(speakers);
 
   return (
-    <div className="font-custom">
+    <div className="font-custom pt-24">
     <section>
     <ProductHeader productName={'speakers'} />
     </section>

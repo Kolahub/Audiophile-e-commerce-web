@@ -6,6 +6,7 @@ import Catergory from "../components/Catergory";
 import StoreDescription from "../components/StoreDescription";
 import Footer from "../components/Footer";
 import AddToCart from "../components/AddToCart";
+import GoBack from "../components/GoBack";
 
 function EarphonesDetails() {
   const products = useRouteLoaderData('earphones-detail')
@@ -15,7 +16,10 @@ function EarphonesDetails() {
   // console.log(item);
 
   return (
-    <div className="font-custom">
+    <div className="font-custom pt-24">
+      <div className="px-6 pt-12 lg:container">
+        <GoBack />
+      </div>
             <section className='px-6 lg:container py-16'>
         <AddToCart product={item} />
       </section>
@@ -48,6 +52,7 @@ function EarphonesDetails() {
 
 export default EarphonesDetails
 
+// eslint-disable-next-line no-unused-vars
 export async function Loader({ request, params }) {
   const id = params.earphoneId;
   console.log(id);

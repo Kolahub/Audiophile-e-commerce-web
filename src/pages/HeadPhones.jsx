@@ -13,7 +13,7 @@ function HeadPhones() {
   const headphones = products.filter(el => el.name.includes('Headphones'))
   // console.log(headphones);
   return (
-   <div className="font-custom">
+   <div className="font-custom pt-24">
    <section>
    <ProductHeader productName={'headphones'} />
    </section>

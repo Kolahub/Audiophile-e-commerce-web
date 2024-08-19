@@ -1,5 +1,4 @@
 // import React from 'react'
-
 import { json, useLoaderData } from "react-router-dom"
 import Catergory from "../components/Catergory"
 import Footer from "../components/Footer"
@@ -13,7 +12,7 @@ function EarPhone() {
   const earphones = products.filter(el => el.name.includes('Earphone'))
   // console.log(earphones);
   return (
-    <div className="font-custom">
+    <div className="font-custom pt-24">
     <section>
     <ProductHeader productName={'earphones'} />
     </section>
