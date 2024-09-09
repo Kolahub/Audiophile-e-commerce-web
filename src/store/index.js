@@ -2,7 +2,8 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const intialProductSlice = {
     cart: [],
-    isCartOpen: false
+    isCartOpen: false,
+    payed: false
 }
 
 const productsSlice = createSlice ({
@@ -19,6 +20,10 @@ const productsSlice = createSlice ({
             action.payload.quantity = 1
             action.payload.total = action.payload.quantity * action.payload.price
             state.cart.push(action.payload)
+        },
+
+        clearCart (state) {
+            state.cart = []
         },
 
         increaseProductQuantity(state, action) {
@@ -44,7 +49,13 @@ const productsSlice = createSlice ({
 
         toggleOpenCart (state) {
             state.isCartOpen = !state.isCartOpen
+        },
+
+        pay (state) {
+            state.payed = !state.payed
         }
+
+
     }
 })
 

@@ -3,6 +3,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Cart from "../components/Cart";
+import ScrollToTop from "../components/ScrollTop";
 
 function RootLayout() {
   return (
@@ -12,6 +13,7 @@ function RootLayout() {
       <Cart />
       </section>
       <Outlet />
+      <ScrollToTop />
     </>
   );
 }

@@ -3,9 +3,13 @@ import { Link, useLocation } from 'react-router-dom'
 
 function GoBack() {
     const location = useLocation()
+    console.log(location);
+    
     const locationBack = location.pathname.split('/')
+    console.log(locationBack.length);
+    
   return (
-    <Link to={`/${locationBack[1]}`}>Go Back</Link>
+    <Link to='..'>Go Back</Link>
   )
 }
 
